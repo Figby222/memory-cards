@@ -1,0 +1,20 @@
+Main:
+add keys array of keys to query API
+add selectedKeys array that stores the keys already selected by the user
+
+add a handler function that takes a key arg and stores it in selectedKeys
+
+In cardClickHandler:
+store key in selectedKeys,
+shuffle cards
+
+render cards with prop containing a random, but unique key from keysArr, and pass 
+the click handler
+
+
+
+Card:
+(takes key and clickHandler)
+use an effect to query an external API to get characterName, imgSrc, & subtext using key
+
+render a header (with characterName), img (with imgSrc), & p (with subtext) in a div.card 
