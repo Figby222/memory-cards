@@ -1,4 +1,7 @@
 function Main() {
+    const keys = [];
+    const selectedKeys = [];
+
     return (
         <>
             <main>
