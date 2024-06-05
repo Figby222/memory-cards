@@ -15,7 +15,10 @@ function getShuffledArray(array) {
 function Main() {
     let keys = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
     const [ selectedKeys, setSelectedKeys ] = useState([]);
+    
+    keys = getShuffledArray(keys);
 
+    
 
     return (
         <>
