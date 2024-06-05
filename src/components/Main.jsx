@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 function Main() {
     const keys = [];
-    const selectedKeys = [];
+    const [ selectedKeys, setSelectedKeys ] = useState([]);
+
 
     return (
         <>
