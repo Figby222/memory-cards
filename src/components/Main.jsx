@@ -18,7 +18,10 @@ function Main() {
     
     APIQueryKeys = getShuffledArray(APIQueryKeys);
 
-    
+    function cardClickHandler(key) {
+        setSelectedAPIQueryKeys([ ...selectedAPIQueryKeys, key ]);
+
+    }
 
     return (
         <>
