@@ -13,10 +13,10 @@ function getShuffledArray(array) {
 }
 
 function Main() {
-    let keys = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
-    const [ selectedKeys, setSelectedKeys ] = useState([]);
+    let APIQueryKeys = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
+    const [ selectedAPIQueryKeys, setSelectedAPIQueryKeys ] = useState([]);
     
-    keys = getShuffledArray(keys);
+    APIQueryKeys = getShuffledArray(APIQueryKeys);
 
     
 
