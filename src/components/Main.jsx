@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Main() {
-    let keys = [];
+    let keys = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
     const [ selectedKeys, setSelectedKeys ] = useState([]);
 
 
