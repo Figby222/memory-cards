@@ -1,12 +1,15 @@
 Main:
 add keys array of keys to query API
 add selectedKeys array that stores the keys already selected by the user
+shuffle keys
 
 add a handler function that takes a key arg and stores it in selectedKeys
 
 In cardClickHandler:
 store key in selectedKeys,
-shuffle cards
+if the user has already clicked the card with the specified key, set the high score to
+the current score, and set the current score to 0.
+Otherwise, increase the current score
 
 render cards with prop containing a random, but unique key from keysArr, and pass 
 the click handler
