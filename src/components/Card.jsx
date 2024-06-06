@@ -1,8 +1,14 @@
-function Card({ id }) {
+function Card({ id, onClick }) {
     return (
-        <section className="card">
-            <p>{id}</p>
-        </section>
+        <>
+            <button 
+                className="card"
+                type="button"
+                onClick={() => onClick(id)}
+            >
+                <p>{id}</p>
+            </button>
+        </>
     )
 }
 

@@ -32,6 +32,7 @@ function Main() {
                         <Card 
                             key={id}
                             id={id}
+                            onClick={cardClickHandler}
                         />
                     )
                 })}
