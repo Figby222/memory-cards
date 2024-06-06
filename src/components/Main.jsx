@@ -2,13 +2,17 @@ import { useState } from 'react';
 import Card from './Card';
 
 function getShuffledArray(array) {
+    let arrayCopy = [ ...array ];
     const newArray = [];
-    while(newArray.length < array.length) {
-        const index = Math.floor(Math.random() * array.length);
-        if (!(newArray.includes(array[index]))) {
-            newArray.push(array[index]);
-        }
+    for(let i = 0; i < array.length; i++) {
+        const index = Math.floor(Math.random() * arrayCopy.length);
+
+        newArray.push(arrayCopy[index]);
+
+        arrayCopy = arrayCopy.slice(0, index)
+            .concat(arrayCopy.slice(index + 1));
     }
+    // console.log(newArray);
 
     return newArray;
 }
