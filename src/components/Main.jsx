@@ -13,13 +13,13 @@ function getShuffledArray(array) {
 }
 
 function Main() {
-    let APIQueryKeys = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
-    const [ selectedAPIQueryKeys, setSelectedAPIQueryKeys ] = useState([]);
+    let APIResourceIds = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
+    const [ selectedAPIResourceIds, setSelectedAPIResourceIds ] = useState([]);
     
-    APIQueryKeys = getShuffledArray(APIQueryKeys);
+    APIResourceIds = getShuffledArray(APIResourceIds);
 
-    function cardClickHandler(key) {
-        setSelectedAPIQueryKeys([ ...selectedAPIQueryKeys, key ]);
+    function cardClickHandler(resourceId) {
+        setSelectedAPIResourceIds([ ...selectedAPIResourceIds, resourceId ]);
 
     }
 
