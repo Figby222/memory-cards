@@ -18,7 +18,7 @@ function getShuffledArray(array) {
 }
 
 function Main() {
-    let APIResourceIds = [ "asdasd", "paiaufghisf", ";oiuhsadgiuagdh", "iauefiuaifu"];
+    let APIResourceIds = [ 1, 2, 3, 4];
     const [ selectedAPIResourceIds, setSelectedAPIResourceIds ] = useState([]);
     
     APIResourceIds = getShuffledArray(APIResourceIds);
