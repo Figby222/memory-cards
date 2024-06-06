@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Card from './Card';
 
 function getShuffledArray(array) {
     const newArray = [];
@@ -26,6 +27,14 @@ function Main() {
     return (
         <>
             <main>
+                {APIResourceIds.map(id => {
+                    return (
+                        <Card 
+                            key={id}
+                            id={id}
+                        />
+                    )
+                })}
             </main>
         </>
     )
