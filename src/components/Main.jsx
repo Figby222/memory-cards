@@ -31,10 +31,10 @@ function Main() {
     return (
         <>
             <main>
-                {APIResourceIds.map(id => {
+                {APIResourceIds.map((id, index) => {
                     return (
                         <Card 
-                            key={id}
+                            key={index}
                             id={id}
                             onClick={cardClickHandler}
                         />
