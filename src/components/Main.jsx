@@ -20,6 +20,7 @@ function getShuffledArray(array) {
 function Main() {
     let APIResourceIds = [ 4, 6, 8, 10];
     const [ selectedAPIResourceIds, setSelectedAPIResourceIds ] = useState([]);
+    const [ currentScore, setCurrentScore ] = useState(0);
     
     APIResourceIds = getShuffledArray(APIResourceIds);
 
