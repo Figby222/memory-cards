@@ -3,3 +3,7 @@ button {
     border: 2px solid blue;
     border-radius: 20px;
 }
+
+button:hover {
+    background-color: rgb(255, 178, 35);
+}
