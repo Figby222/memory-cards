@@ -31,15 +31,17 @@ function Main() {
     return (
         <>
             <main>
-                {APIResourceIds.map((id, index) => {
-                    return (
-                        <Card 
-                            key={index}
-                            id={id}
-                            onClick={cardClickHandler}
-                        />
-                    )
-                })}
+                <section className="cards">
+                    {APIResourceIds.map((id, index) => {
+                        return (
+                            <Card 
+                                key={index}
+                                id={id}
+                                onClick={cardClickHandler}
+                            />
+                        )
+                    })}
+                </section>
             </main>
         </>
     )
