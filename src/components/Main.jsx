@@ -26,12 +26,13 @@ function Main() {
 
     function cardClickHandler(resourceId) {
         setSelectedAPIResourceIds([ ...selectedAPIResourceIds, resourceId ]);
-
+        setCurrentScore(currentScore + 1);
     }
 
     return (
         <>
             <main>
+                <h2 className="score">Score: {currentScore}</h2>
                 <section className="cards">
                     {APIResourceIds.map((id, index) => {
                         return (
