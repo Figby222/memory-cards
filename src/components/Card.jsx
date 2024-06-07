@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function Card({ id, onClick }) {
+    const [ characterName, setCharacterName ] = useState();
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
         .then(response => response.json())
         .then(response => {
-            console.log(`${id}: `, response.name);
+            setCharacterName(response.name);
+            console.log(`${id}: `, response);
         });
     }, [id])
     return (
@@ -15,7 +17,7 @@ function Card({ id, onClick }) {
                 type="button"
                 onClick={() => onClick(id)}
             >
-                <p>{id}</p>
+                <h2 className="character-name">{characterName}</h2>
             </button>
         </>
     )
