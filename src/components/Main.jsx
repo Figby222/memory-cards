@@ -27,13 +27,24 @@ function Main() {
 
     function cardClickHandler(resourceId) {
         setSelectedAPIResourceIds([ ...selectedAPIResourceIds, resourceId ]);
-        setCurrentScore(currentScore + 1);
+        if (selectedAPIResourceIds.includes(resourceId)) {
+            setCurrentScore(0);
+            setSelectedAPIResourceIds([]);
+        } else {
+            const newCurrentScore = currentScore + 1;
+            setCurrentScore(newCurrentScore);
+            if (newCurrentScore > highScore) {
+                setHighScore(newCurrentScore);
+            }
+        }
+
     }
 
     return (
         <>
             <main>
                 <h2 className="score">Score: {currentScore}</h2>
+                <h2 className="high-score">High Score: {highScore}</h2>
                 <section className="cards">
                     {APIResourceIds.map((id, index) => {
                         return (
