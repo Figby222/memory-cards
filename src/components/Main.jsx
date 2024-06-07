@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Card from './Card';
+import '../styles/Main.css';
 
 function getShuffledArray(array) {
     let arrayCopy = [ ...array ];

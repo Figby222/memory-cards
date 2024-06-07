@@ -1,0 +1,14 @@
+main {
+    /* background-color: blue; */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 250px;
+}
+
+button {
+    /* background-color: green;
+    border: 2px solid blue; */
+}
