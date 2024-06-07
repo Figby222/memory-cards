@@ -12,7 +12,6 @@ function Card({ id, onClick }) {
                 color: response.color.name,
                 capture_rate: response.capture_rate,
             });
-            console.log(`${id}: `, response);
         });
     }, [id])
     return (
@@ -23,11 +22,13 @@ function Card({ id, onClick }) {
                 onClick={() => onClick(id)}
             >
                 <h2 className="character-name">{characterName}</h2>
-                {Object.keys(characterAttributes).map(key => {
-                    return <p key={key} className="character-description">
-                            {key}: {characterAttributes[key]}
-                        </p>
-                })}
+                <div className="character-attributes">
+                    {Object.keys(characterAttributes).map(key => {
+                        return <p key={key} className="character-description">
+                                {key}: {characterAttributes[key]}
+                            </p>
+                    })}
+                </div>
             </button>
         </>
     )
