@@ -12,3 +12,7 @@ button {
 button:hover {
     background-color: rgb(255, 178, 35);
 }
+
+.character-attributes {
+    justify-self: start;
+}
