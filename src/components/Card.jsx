@@ -3,12 +3,14 @@ import '../styles/Card.css';
 
 function Card({ id, onClick }) {
     const [ characterName, setCharacterName ] = useState();
+    const [ imgSrc, setImgSrc ] = useState("");
     const [ characterAttributes, setCharacterAttributes ] = useState({});
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(response => response.json())
         .then(response => {
             setCharacterName(response.name);
+            setImgSrc(response.sprites.front_shiny);
             setCharacterAttributes({
                 hp: response.stats[0].base_stat,
                 attack: response.stats[1].base_stat,
@@ -24,6 +26,7 @@ function Card({ id, onClick }) {
                 onClick={() => onClick(id)}
             >
                 <h2 className="character-name">{characterName}</h2>
+                <img src={imgSrc} alt={`${characterName} image`} />
                 <div className="character-attributes">
                     {Object.keys(characterAttributes).map(key => {
                         return <p key={key} className="character-description">
