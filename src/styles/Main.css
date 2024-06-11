@@ -8,6 +8,11 @@ main {
     grid-auto-rows: min-content;
 }
 
+.score,
+.high-score {
+    color: rgb(0, 255, 98);
+}
+
 button {
     /* background-color: green;
     border: 2px solid blue; */
