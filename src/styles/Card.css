@@ -9,6 +9,10 @@ button {
     border-radius: 20px;
 }
 
+img {
+    min-width: 100px
+}
+
 button:hover {
     background-color: rgb(255, 178, 35);
 }
