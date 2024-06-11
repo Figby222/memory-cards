@@ -9,6 +9,11 @@ function Card({ id, onClick }) {
         .then(response => response.json())
         .then(response => {
             setCharacterName(response.name);
+            setCharacterAttributes({
+                hp: response.stats[0].base_stat,
+                attack: response.stats[1].base_stat,
+                defense: response.stats[2].base_stat
+            })
         });
     }, [id])
     return (
